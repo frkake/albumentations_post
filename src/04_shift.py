@@ -10,7 +10,7 @@ rootutils.setup_root(__file__, indicator=".git", pythonpath=True)
 from src.utils import make_grid_image
 
 
-class Shift(A.DualTransform):
+class RandomShift(A.DualTransform):
     def __init__(
         self, 
         x_shift: Tuple[int, int],
@@ -45,7 +45,7 @@ class Shift(A.DualTransform):
         }
 
 
-transform = Shift(x_shift=(-100, 100), y_shift=(-100, 100), p=1)
+transform = RandomShift(x_shift=(-100, 100), y_shift=(-100, 100), p=1)
 
 for i in range(2):
     image = cv2.imread('data/images/dog_and_cat.png')
