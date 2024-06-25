@@ -1,4 +1,4 @@
-name: albumentations
+name: albumentations_tutorial
 channels:
   - defaults
 dependencies:
